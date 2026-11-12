@@ -1,0 +1,11 @@
+title = "Gitleaks demo configuration"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "demo-secret-marker"
+description = "Detects the safe synthetic marker used by the demo fixture"
+regex = '''GITLEAKS_DEMO_SECRET_[A-F0-9]{16}'''
+secretGroup = 0
+keywords = ["GITLEAKS_DEMO_SECRET_"]
